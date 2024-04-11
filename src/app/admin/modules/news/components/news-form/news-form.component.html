@@ -1,0 +1,47 @@
+<form [formGroup]="newsForm" (ngSubmit)="onSubmit()">
+  <p>
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput placeholder="Title" formControlName="title" />
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <mat-label>Text</mat-label>
+      <textarea
+        matInput
+        placeholder="Text"
+        formControlName="content"
+      ></textarea>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <mat-label>Categories</mat-label>
+      <mat-select formControlName="category">
+        <mat-option *ngFor="let category of categories" [value]="category.id">
+          {{ category.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <mat-label>Image Url</mat-label>
+      <input matInput placeholder="Image Url" formControlName="imageUrl" />
+    </mat-form-field>
+  </p>
+
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    (ngSubmit)="onSubmit()"
+    class="align-middle"
+  >
+    Add
+  </button>
+</form>
