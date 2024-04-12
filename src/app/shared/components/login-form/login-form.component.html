@@ -1,0 +1,87 @@
+<div class="row justify-content-center">
+  <div class="col-4">
+    <div class="mb-4 d-flex justify-content-center">
+      <mat-button-toggle-group
+        name="fontStyle"
+        aria-label="Font Style"
+        [value]="active"
+      >
+        <mat-button-toggle value="login" (click)="onLoginTab()"
+          >Login</mat-button-toggle
+        >
+        <mat-button-toggle value="register" (click)="onRegisterTab()"
+          >Register</mat-button-toggle
+        >
+      </mat-button-toggle-group>
+    </div>
+
+    <ng-container>
+      @if (this.active === 'register') {
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmitRegister()">
+        <mat-form-field class="w-100">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstName" />
+          <mat-error
+            *ngIf="
+              registerForm.controls['firstName'].invalid &&
+              registerForm.controls['firstName'].touched
+            "
+          >
+            Insert first name
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="w-100">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="lastName" />
+          <mat-error
+            *ngIf="
+              registerForm.controls['lastName'].invalid &&
+              registerForm.controls['lastName'].touched
+            "
+          >
+            Insert valid last name
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="w-100">
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="username" />
+          <mat-error
+            *ngIf="
+              registerForm.controls['username'].invalid &&
+              registerForm.controls['username'].touched
+            "
+          >
+            Insert valid last name
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="w-100">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" />
+          <mat-error
+            *ngIf="
+              registerForm.controls['password'].invalid &&
+              registerForm.controls['password'].touched
+            "
+          >
+            Insert valid last name
+          </mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" class="w-100">Submit</button>
+      </form>
+
+      } @else {
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
+        <mat-form-field class="w-100">
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="username" />
+        </mat-form-field>
+        <mat-form-field class="w-100">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" />
+        </mat-form-field>
+        <button mat-raised-button color="primary" class="w-100">Submit</button>
+      </form>
+      }
+    </ng-container>
+  </div>
+</div>

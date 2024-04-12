@@ -1,6 +1,11 @@
-<div class="row mat-elevation-z2">
+<div class="row mat-elevation-z2 p-5">
   <div class="col">
-    <h1>Users</h1>
+    <div class="d-flex justify-content-between">
+      <h1>Users</h1>
+      <button mat-raised-button color="primary" (click)="openDialog('')">
+        Add User
+      </button>
+    </div>
     <table mat-table [dataSource]="items" class="mat-elevation-z2">
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef>ID</th>
@@ -30,7 +35,7 @@
           <button mat-icon-button color="warn" (click)="deleteItem(item.id)">
             <mat-icon>delete</mat-icon>
           </button>
-          <button mat-icon-button color="primary">
+          <button mat-icon-button color="primary" (click)="openDialog(item.id)">
             <mat-icon>edit</mat-icon>
           </button>
         </td>

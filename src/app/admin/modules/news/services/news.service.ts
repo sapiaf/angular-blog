@@ -14,17 +14,58 @@ export class NewsService extends CRUDService<News> {
     this.apiUrl = 'http://localhost:3000/news';
   }
 
-  getRecentNews(): Observable<News[]> {
+  getMostRecentNews(): Observable<News[]> {
     return this.http.get<News[]>(`${this.apiUrl}`).pipe(
       map((news) => {
-        console.log(news.forEach((n) => console.log(n.updatedAt)));
         return news.sort((a, b) => {
           const updatedAtA = a.updatedAt ? new Date(a.updatedAt).getTime() : 0;
           const updatedAtB = b.updatedAt ? new Date(b.updatedAt).getTime() : 0;
-          return updatedAtB - updatedAtA;
+          const createdAtA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+          const createdAtB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+
+          console.log(updatedAtA, updatedAtB, createdAtA, createdAtB);
+
+          if (updatedAtB - updatedAtA === 0) {
+            return createdAtB - createdAtA;
+          } else {
+            return updatedAtB - updatedAtA;
+          }
         });
       })
     );
+  }
+
+  getMostRecentNewsByCategory(categoryId: string): Observable<News[]> {
+    return this.http.get<News[]>(`${this.apiUrl}`).pipe(
+      map((news) => {
+        return news
+          .filter((n) => n.category === categoryId)
+          .sort((a, b) => {
+            const updatedAtA = a.updatedAt
+              ? new Date(a.updatedAt).getTime()
+              : 0;
+            const updatedAtB = b.updatedAt
+              ? new Date(b.updatedAt).getTime()
+              : 0;
+            const createdAtA = a.createdAt
+              ? new Date(a.createdAt).getTime()
+              : 0;
+            const createdAtB = b.createdAt
+              ? new Date(b.createdAt).getTime()
+              : 0;
+
+            if (updatedAtB - updatedAtA === 0) {
+              return createdAtB - createdAtA;
+            } else {
+              return updatedAtB - updatedAtA;
+            }
+          });
+      })
+    );
+  }
+
+  getNewsByUser(userId: string): Observable<News[]> {
+    return this.http.get<News[]>(`${this.apiUrl}?author=${userId}`);
   }
 
   getRecentNewsByCategory(categoryId: string): Observable<News[]> {

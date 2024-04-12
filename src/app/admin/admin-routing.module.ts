@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { adminGuard } from '../core/auth/guards/admin.guard';
 
 const routes: Routes = [
   {
@@ -8,9 +10,14 @@ const routes: Routes = [
     component: DashboardComponent,
   },
   {
+    path: 'profile',
+    component: ProfileComponent,
+  },
+  {
     path: 'users',
     loadChildren: () =>
       import('./modules/users/users.module').then((m) => m.UsersModule),
+    canActivate: [adminGuard],
   },
   {
     path: 'news',
@@ -23,6 +30,7 @@ const routes: Routes = [
       import('./modules/comments/comments.module').then(
         (m) => m.CommentsModule
       ),
+    canActivate: [adminGuard],
   },
   {
     path: 'categories',
@@ -30,6 +38,7 @@ const routes: Routes = [
       import('./modules/categories/categories.module').then(
         (m) => m.CategoriesModule
       ),
+    canActivate: [adminGuard],
   },
 ];
 

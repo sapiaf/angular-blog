@@ -1,0 +1,49 @@
+<mat-card class="card">
+  <mat-card-header class="card-header">
+    <mat-card-title>Profile</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="d-flex justify-content-end align-items-center">
+      <button mat-icon-button (click)="openDialog(currentUser?.id)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        routerLink="/admin/news/form"
+        *ngIf="currentUser?.role === 0 || currentUser?.role === 2"
+      >
+        <mat-icon>add</mat-icon>
+        Write News
+      </button>
+    </div>
+
+    <div class="mt-3">
+      <p><strong>First Name:</strong> {{ currentUser?.firstName }}</p>
+      <p><strong>Last Name:</strong> {{ currentUser?.lastName }}</p>
+      <p><strong>Username:</strong> {{ currentUser?.username }}</p>
+      <p><strong>Pen Name:</strong> {{ currentUser?.penName }}</p>
+    </div>
+
+    <ul class="list-group mt-3">
+      <li class="list-group-item" *ngFor="let post of currentUser?.posts">
+        {{ post }}
+      </li>
+    </ul>
+
+    <h3 class="mt-3">News:</h3>
+    <mat-list>
+      <mat-list-item
+        *ngFor="let text of news"
+        class="list-group-item d-flex justify-content-between align-items-center"
+      >
+        <a [routerLink]="['/news', text.id, createSlug(text.title)]">{{
+          text.title
+        }}</a>
+        <button mat-icon-button (click)="editNews(text)">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

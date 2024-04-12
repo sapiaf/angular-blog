@@ -10,9 +10,12 @@ import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSelectModule } from '@angular/material/select';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatListModule } from '@angular/material/list';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
-  declarations: [],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -24,6 +27,10 @@ import { MatSelectModule } from '@angular/material/select';
     MatInputModule,
     MatSnackBarModule,
     MatSelectModule,
+    MatButtonToggleModule,
+    MatDialogModule,
+    MatListModule,
+    MatPaginatorModule,
   ],
   exports: [
     MatButtonModule,
@@ -35,6 +42,10 @@ import { MatSelectModule } from '@angular/material/select';
     MatInputModule,
     MatSnackBarModule,
     MatSelectModule,
+    MatButtonToggleModule,
+    MatDialogModule,
+    MatListModule,
+    MatPaginatorModule,
   ],
 })
 export class MaterialModule {}

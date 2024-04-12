@@ -7,6 +7,8 @@ import { take } from 'rxjs';
 import { News } from '../../../../../core/models/news';
 import { Category } from '../../../../../core/models/category';
 import { CategoriesService } from '../../../categories/services/categories.service';
+import { User } from '../../../../../core/models/user';
+import { AuthService } from '../../../../../core/auth/services/auth.service';
 
 @Component({
   selector: 'app-news-form',
@@ -19,13 +21,15 @@ export class NewsFormComponent implements OnInit, OnDestroy {
   showForm: boolean = false;
   news!: News;
   categories!: Category[];
+  currentUser: User | null = null;
 
   constructor(
     private formBuilder: FormBuilder,
     private newsService: NewsService,
     private snackBar: MatSnackBar,
     private router: Router,
-    private categoryService: CategoriesService
+    private categoryService: CategoriesService,
+    private authService: AuthService
   ) {}
 
   ngOnDestroy(): void {
@@ -33,6 +37,10 @@ export class NewsFormComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.authService.userLogged$.subscribe((user) => {
+      this.currentUser = user;
+    });
+
     this.categoryService.getAll().subscribe({
       next: (categories) => {
         this.categories = categories;
@@ -66,7 +74,7 @@ export class NewsFormComponent implements OnInit, OnDestroy {
   buildForm(): void {
     this.newsForm = this.formBuilder.group({
       title: [''],
-      author: ['John Doe'],
+      author: [this.currentUser?.id],
       content: [''],
       date: [Date.now()],
       category: [''],

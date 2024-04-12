@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div
+      class="col-lg-4 col-md-6 col-sm-12 mb-4"
+      *ngFor="let text of news$ | async"
+    >
+      <mat-card
+        class="p-2"
+        [routerLink]="['/news', text.id, createSlug(text.title)]"
+      >
+        <mat-card-header>
+          <mat-card-title>{{ text.title }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="mb-2 mt-2">
+          <p>{{ text.content | slice : 0 : 100 }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary">Visualizza</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

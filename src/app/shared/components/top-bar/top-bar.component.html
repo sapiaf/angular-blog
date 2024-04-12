@@ -1,7 +1,18 @@
 <mat-toolbar color="primary">
-  <span class="logo">Angular Blog</span>
+  <a mat-button routerLink="" class="fs-5">Angular News</a>
   <span class="spacer"></span>
-  <button mat-button routerLink="/">Home</button>
-  <button mat-button routerLink="/posts">Posts</button>
-  <button mat-button routerLink="/about">About</button>
+
+  <ng-container *ngIf="isLoggedIn; else notLoggedIn">
+    <button mat-button routerLink="/admin/news/form">Create Post</button>
+    <button mat-button routerLink="/admin/profile">Profile</button>
+    <button mat-button routerLink="/admin" *ngIf="currentUser?.role === 0">
+      Admin Area
+    </button>
+    <button mat-button (click)="logout()">Logout</button>
+  </ng-container>
+
+  <ng-template #notLoggedIn>
+    <button mat-button routerLink="/login">Login</button>
+    <button mat-button routerLink="/register">Register</button>
+  </ng-template>
 </mat-toolbar>

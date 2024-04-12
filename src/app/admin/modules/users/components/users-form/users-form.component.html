@@ -1,0 +1,53 @@
+<mat-dialog-content>
+  <h2 mat-dialog-title>Edit User</h2>
+  <form [formGroup]="usersForm" (ngSubmit)="onSubmit()" class="w-100">
+    <div>
+      <mat-form-field>
+        <input matInput formControlName="firstName" placeholder="First Name" />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput formControlName="lastName" placeholder="Last Name" />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput formControlName="username" placeholder="Username" />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input
+          matInput
+          formControlName="password"
+          type="password"
+          placeholder="Password"
+        />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput formControlName="penName" placeholder="Pen Name" />
+      </mat-form-field>
+    </div>
+
+    <div *ngIf="!isProfile">
+      <mat-form-field>
+        <mat-label>Role</mat-label>
+        <mat-select formControlName="role">
+          <mat-option value="0">Admin</mat-option>
+          <mat-option value="1">Lettore</mat-option>
+          <mat-option value="2">Scrittore</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </div>
+  </form>
+</mat-dialog-content>

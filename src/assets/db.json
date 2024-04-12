@@ -1,0 +1,154 @@
+{
+  "users": [
+    {
+      "id": "d7b8",
+      "role": 0,
+      "posts": [],
+      "comments": [],
+      "penName": "mino",
+      "firstName": "test",
+      "lastName": "test",
+      "username": "test",
+      "password": "test"
+    },
+    {
+      "id": "9141",
+      "role": "2",
+      "posts": [],
+      "comments": [],
+      "penName": "reader",
+      "firstName": "reader",
+      "lastName": "reader",
+      "username": "reader",
+      "password": "reader"
+    },
+    {
+      "id": "1a56",
+      "role": "2",
+      "posts": [],
+      "comments": [],
+      "penName": "",
+      "firstName": "editor",
+      "lastName": "editor",
+      "username": "editor",
+      "password": "editor"
+    }
+  ],
+  "news": [
+    {
+      "id": "6fb8",
+      "title": "Basi di Angular",
+      "author": "d7b8",
+      "content": "    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "date": 1712925149467,
+      "category": "5ca0",
+      "imageUrl": "",
+      "createdAt": 1712925149467,
+      "updatedAt": null,
+      "comments": null
+    },
+    {
+      "id": "3214",
+      "title": "Typescript e Angular",
+      "author": "d7b8",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero enim sed faucibus turpis in eu mi. Dolor magna eget est lorem ipsum dolor sit amet. Laoreet id donec ultrices tincidunt arcu non sodales neque sodales. Vitae congue eu consequat ac felis donec et odio. Tempus quam pellentesque nec nam aliquam sem. Sit amet dictum sit amet justo donec enim diam vulputate. Egestas sed tempus urna et pharetra pharetra massa. At augue eget arcu dictum. Nec nam aliquam sem et tortor consequat id porta. Pretium lectus quam id leo in vitae. Diam maecenas ultricies mi eget mauris pharetra et ultrices neque.",
+      "date": 1712927263214,
+      "category": "581d",
+      "imageUrl": "",
+      "createdAt": 1712927263214,
+      "updatedAt": null,
+      "comments": null
+    },
+    {
+      "id": "5ceb",
+      "title": "CSS e Angular Material",
+      "author": "d7b8",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero enim sed faucibus turpis in eu mi. Dolor magna eget est lorem ipsum dolor sit amet. Laoreet id donec ultrices tincidunt arcu non sodales neque sodales. Vitae congue eu consequat ac felis donec et odio. Tempus quam pellentesque nec nam aliquam sem. Sit amet dictum sit amet justo donec enim diam vulputate. Egestas sed tempus urna et pharetra pharetra massa. At augue eget arcu dictum. Nec nam aliquam sem et tortor consequat id porta. Pretium lectus quam id leo in vitae. Diam maecenas ultricies mi eget mauris pharetra et ultrices neque.",
+      "date": 1712927280266,
+      "category": "5bfb",
+      "imageUrl": "",
+      "createdAt": 1712927280266,
+      "updatedAt": null,
+      "comments": null
+    },
+    {
+      "id": "8661",
+      "title": "Tipi di Direttive",
+      "author": "d7b8",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero enim sed faucibus turpis in eu mi. Dolor magna eget est lorem ipsum dolor sit amet. Laoreet id donec ultrices tincidunt arcu non sodales neque sodales. Vitae congue eu consequat ac felis donec et odio. Tempus quam pellentesque nec nam aliquam sem. Sit amet dictum sit amet justo donec enim diam vulputate. Egestas sed tempus urna et pharetra pharetra massa. At augue eget arcu dictum. Nec nam aliquam sem et tortor consequat id porta. Pretium lectus quam id leo in vitae. Diam maecenas ultricies mi eget mauris pharetra et ultrices neque.",
+      "date": 1712927286724,
+      "category": "5ca0",
+      "imageUrl": "",
+      "createdAt": 1712927286724,
+      "updatedAt": null,
+      "comments": null
+    },
+    {
+      "id": "87b6",
+      "title": "Case Study: Angular Blog",
+      "author": "d7b8",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero enim sed faucibus turpis in eu mi. Dolor magna eget est lorem ipsum dolor sit amet. Laoreet id donec ultrices tincidunt arcu non sodales neque sodales. Vitae congue eu consequat ac felis donec et odio. Tempus quam pellentesque nec nam aliquam sem. Sit amet dictum sit amet justo donec enim diam vulputate. Egestas sed tempus urna et pharetra pharetra massa. At augue eget arcu dictum. Nec nam aliquam sem et tortor consequat id porta. Pretium lectus quam id leo in vitae. Diam maecenas ultricies mi eget mauris pharetra et ultrices neque.",
+      "date": 1712935108604,
+      "category": "581d",
+      "imageUrl": "",
+      "createdAt": 1712935108604,
+      "updatedAt": null,
+      "comments": null
+    },
+    {
+      "id": "a0ca",
+      "title": "Form Validation con Angular",
+      "author": "d7b8",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero enim sed faucibus turpis in eu mi. Dolor magna eget est lorem ipsum dolor sit amet. Laoreet id donec ultrices tincidunt arcu non sodales neque sodales. Vitae congue eu consequat ac felis donec et odio. Tempus quam pellentesque nec nam aliquam sem. Sit amet dictum sit amet justo donec enim diam vulputate. Egestas sed tempus urna et pharetra pharetra massa. At augue eget arcu dictum. Nec nam aliquam sem et tortor consequat id porta. Pretium lectus quam id leo in vitae. Diam maecenas ultricies mi eget mauris pharetra et ultrices neque.",
+      "date": 1712935518913,
+      "category": "5ca0",
+      "imageUrl": "",
+      "createdAt": 1712935518913,
+      "updatedAt": null,
+      "comments": null
+    },
+    {
+      "id": "1b46",
+      "title": "Angular Testing",
+      "author": "d7b8",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero enim sed faucibus turpis in eu mi. Dolor magna eget est lorem ipsum dolor sit amet. Laoreet id donec ultrices tincidunt arcu non sodales neque sodales. Vitae congue eu consequat ac felis donec et odio. Tempus quam pellentesque nec nam aliquam sem. Sit amet dictum sit amet justo donec enim diam vulputate. Egestas sed tempus urna et pharetra pharetra massa. At augue eget arcu dictum. Nec nam aliquam sem et tortor consequat id porta. Pretium lectus quam id leo in vitae. Diam maecenas ultricies mi eget mauris pharetra et ultrices neque.",
+      "date": 1712935531991,
+      "category": "581d",
+      "imageUrl": "",
+      "createdAt": 1712935531991,
+      "updatedAt": null,
+      "comments": null
+    },
+    {
+      "id": "4d19",
+      "title": "JavaScript 101",
+      "author": "d7b8",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero enim sed faucibus turpis in eu mi. Dolor magna eget est lorem ipsum dolor sit amet. Laoreet id donec ultrices tincidunt arcu non sodales neque sodales. Vitae congue eu consequat ac felis donec et odio. Tempus quam pellentesque nec nam aliquam sem. Sit amet dictum sit amet justo donec enim diam vulputate. Egestas sed tempus urna et pharetra pharetra massa. At augue eget arcu dictum. Nec nam aliquam sem et tortor consequat id porta. Pretium lectus quam id leo in vitae. Diam maecenas ultricies mi eget mauris pharetra et ultrices neque.",
+      "date": 1712936152797,
+      "category": "ab0b",
+      "imageUrl": "",
+      "createdAt": 1712936152797,
+      "updatedAt": null,
+      "comments": null
+    }
+  ],
+  "comments": [],
+  "categories": [
+    {
+      "id": "5ca0",
+      "name": "Angular"
+    },
+    {
+      "id": "581d",
+      "name": "Typescript"
+    },
+    {
+      "id": "ab0b",
+      "name": "JavaScript"
+    },
+    {
+      "id": "5bfb",
+      "name": "CSS"
+    }
+  ]
+}
